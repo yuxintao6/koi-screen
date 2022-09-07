@@ -1,0 +1,353 @@
+// 清除元素默认的内外边距
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  outline: none;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+// 让所有斜体不倾斜
+em,i {
+  font-style: normal;
+}
+
+// 去掉列表前面的小点
+li {
+  list-style: none;
+}
+
+// 图片没有边框 去掉图片dice的空白缝隙
+img {
+  border: 0; //ie6
+  vertical-align: middle;
+}
+
+//button 按钮变小手
+buttom {
+  cursor: pointer
+}
+
+// 取消a标签连接下划线
+a {
+  color: #343440;
+  text-decoration: none;
+}
+
+a:hover {
+  color:#343440;
+}
+
+//浮动
+.float-r {
+  float: right;
+}
+
+//浮动
+.float-l {
+  float: left;
+}
+
+// 字体加粗
+.font-bold {
+  font-weight: bold;
+}
+
+//文章一行显示，多余省略号显示
+.title-item {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 方块背景颜色
+.bg-color-black {
+  background-color: rgba(19, 25, 47, 0.6);
+}
+
+// 常用颜色
+.colorBlack {
+  color: black !important;
+}
+
+.colorGrass {
+  color: #33cea0;
+}
+
+.colorRed {
+  color: red;
+}
+
+.colorYellow {
+  color: yellow;
+}
+
+.colorLightBlue {
+  color: turquoise;
+}
+
+.colorPink {
+  color: pink;
+}
+
+.colorText {
+  color: white;
+}
+
+.colorBlue {
+  color: blue;
+}
+
+.colorTomato {
+  color: tomato;
+}
+
+.colorDeepskyblue {
+  color: deepskyblue;
+}
+
+.colorDarkturquoise {
+  color: darkturquoise;
+}
+
+.colorLightsalmon {
+  color: lightsalmon;
+}
+
+.colorGold {
+  color: gold;
+}
+
+.colorLightsteelblue {
+  color: lightsteelblue;
+}
+
+.colorSienna {
+  color: sienna;
+}
+
+.colorDarkorchid{
+  color: darkorchid;
+}
+
+.colorLightpink {
+  color: lightpink;
+}
+
+.colorHotpink {
+  color: hotpink;
+}
+// 模板样式结束
+
+
+// 设置默认背景图片
+#index {
+  color: #000207;
+  width: 100%;
+  height: 100%;
+  // 图片缩放自适应
+  background: url("../pageBg.png") center center no-repeat;
+  //background: url("../bgPage.jpg") center center no-repeat;
+  background-size: 100% 100%;
+  position: fixed;
+  overflow: hidden;
+}
+
+// 总体布局
+.koi-body {
+  // 头部布局
+  .header {
+    // DataV边框10宽度左侧和高度设置
+    .dv-dec-10-left {
+      width: 25%;
+      margin-top: 0.5%;
+      margin-left: 0.2%;
+      height: 8px;
+      float: left;
+    }
+
+    // DataV边框10宽度右侧和高度设置
+    .dv-dec-10-right {
+      width: 25%;
+      margin-top: 0.5%;
+      margin-left: 0.2%;
+      height: 8px;
+      float: right;
+      // 边框翻转
+      transform: rotateY(180deg);
+    }
+
+    // DataV边框8左侧宽度和高度设置
+    .dv-dec-8-left {
+      width: 18%;
+      height: 6%;
+      margin-top: 0.7%;
+      position: absolute;
+      left: 25%;
+    }
+
+    // DataV边框8宽度右侧和高度设置
+    .dv-dec-8-right {
+      width: 18%;
+      height: 6%;
+      margin-top: 0.7%;
+      position: absolute;
+      right: 25%;
+    }
+
+    // 标题自定义修改
+    .title {
+      position: absolute;
+      left: 46%;
+      margin-top: 0.8%;
+    }
+
+    // 当前时间css
+    .localTime {
+      position: absolute;
+      right: 1%;
+      top: 2%;
+    }
+
+    // 首页字体css
+    .homePage {
+      position: absolute;
+      left: 1%;
+      top: 2%;
+    }
+
+  }
+
+  // koi-vue-screen可视化大屏三种布局都可以。这里采用方案三进行布局，
+  // 1、网格布局grid。
+  // 2、弹性布局flex。
+  // 3、以及Element-UI的Layout 布局。
+  // 项目中采用Element-UI的Layout 布局。其他两种也可以的，index.vue写的有例子可以自行进行改动。
+
+  // 第一种-网格布局（IE10以下和手机端兼容性问题不太友好）,二维布局比flex更加强大
+  .wrapper{
+    position: absolute;
+    left: 1%;
+    top: 6%;
+    right: 1%;
+    /* 声明一个容器 grid */
+    display: grid;
+    /* 声明列的宽度,数字3表示的重复3次，即有3列宽度为200px*/
+    grid-template-columns: repeat(3,615px);
+    /* 声明行间距和列间距 */
+    grid-gap: 10px;
+    /* 分别表示两行的高度 */
+    grid-template-rows: 420px 500px;
+
+  .item{
+      font-size: 24px;
+      color: #fff;
+  }
+
+  .one {
+      flex: 1;
+      background-color:#b8e8e0 ;
+  }
+  .two {
+      background-color: #8CC7B5;
+  }
+  .three {
+      background-color:#efe3bf ;
+  }
+  .four {
+      background-color: #BEE7E9;
+  }
+  .five {
+      background-color: #E6CEAC;
+  }
+  .six {
+      background-color: #ECAD9E;
+  }
+}
+
+// 第二种-flex 布局,一维布局
+.container {
+  position: absolute;
+  left: 1%;
+  top: 6%;
+  right: 1%;
+  width: 100%;
+  height: 100%;
+  /* 声明一个 flex */
+  display: flex;
+  flex-wrap: wrap;
+  // 列排序
+  flex-direction: column;
+  // 行排序
+  //flex-direction: row;
+  // 溢出则进行换行
+  flex-wrap: wrap;
+  .item{
+    font-size: 24px;
+    color: #fff;
+  }
+
+  .one {
+      width: 30%;
+      height: 30%;
+      background-color:#b8e8e0 ;
+  }
+  .two {
+      width: 30%;
+      height: 30%;
+      background-color: #8CC7B5;
+  }
+  .three {
+      width: 30%;
+      height: 30%;
+      background-color:#efe3bf ;
+  }
+  .four {
+      width: 30%;
+      height: 30%;
+      background-color: #BEE7E9;
+  }
+  .five {
+      width: 30%;
+      height: 30%;
+      background-color: #E6CEAC;
+  }
+  .six {
+      width: 30%;
+      height: 30%;
+      background-color: #ECAD9E;
+  }
+}
+
+//页面根据浏览器大小自适应
+//width:calc(100vw - 100px); //宽度是浏览器宽度减100px
+//height:calc(100vh - 100px); //高度是浏览器高度减100px
+
+//VW是width of view(port)的缩写，也就是浏览器的宽度
+//VH是height of view(port)的缩写，也就是浏览器的高度
+
+/* 本项目采用ElementUI - Layout布局 */
+  .layoutHome {
+    position: absolute;
+    min-width: 1000px;
+    min-height: 600px;
+    top: 5.5%;
+    width: 100%;
+    height: 100%;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+}
