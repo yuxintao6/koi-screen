@@ -1,5 +1,7 @@
 # :cn: koi-screen （响应式可视化大屏）
 ![输入图片说明](https://koi-fish.oss-cn-beijing.aliyuncs.com/koi/screen/images/koi.jpg)
+## Gitee：https://gitee.com/BigCatHome/koi-screen
+## Github：https://github.com/yuxintao6/koi.git
 # 项目访问地址（仅支持PC端）
 ## http://www.koi-screen.online/#/
 ## http://www.koi-screen.online/#/ems
